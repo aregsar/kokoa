@@ -1,0 +1,43 @@
+{
+  "name": "kokoa",
+  "version": "1.0.0",
+  "description": "kokoa",
+  "main": "app/app.js",
+  "scripts": {
+    "start":"./node_modules/.bin/nodemon ./app/app.js --exec './node_modules/.bin/babel-node --presets react,es2015,stage-0' ",
+    "webpack": "node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --content ...",
+    "buildassets": "node_modules/.bin/webpack --config webpack.config.js --port 8080 --content ...",
+    "buildapp": "node_modules/.bin/babel ./app -d build ./app/app.js --presets react,es2015,stage-0",
+    "serve":"node ./build/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aregsar/kokoa.git"
+  },
+  "author": "Areg Sarkissian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aregsar/kokoa/issues"
+  },
+  "homepage": "https://github.com/aregsar/kokoa#readme",
+  "dependencies": {
+    "koa": "^1.1.2",
+    "koa-static": "^2.0.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "nodemon": "^1.8.1",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.11",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
