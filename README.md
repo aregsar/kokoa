@@ -1,9 +1,9 @@
 # kokoa - A koa-react-webpack starter project
 
-assumes the following is pre-installed:
+-assumes the following is pre-installed:
 
-node version 5.4.0
-npm version 3.5.3
+-node version 5.4.0
+-npm version 3.5.3
 
 
 #instructions to run the project:
@@ -12,6 +12,10 @@ git clone git@github.com:aregsar/kokoa.git
 cd kokoa
 npm install
 npm start
+
+navigate to: http://localhost:3000
+
+make changes, save and refresh the browser
 
 #command to re-install local packages from package.json file
 
