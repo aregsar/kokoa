@@ -1,10 +1,10 @@
-var koa = require('koa');
-var app = koa();
+import koa from 'koa';
+let app = koa();
 
 app.use(function *(){
-  this.body = 'Welcome to my World!';
+  this.body = 'Welcome to my World!!!!';
 });
 
 
-app.listen(3000);
+export default app;
 
