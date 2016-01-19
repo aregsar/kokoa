@@ -4,7 +4,7 @@
   "description": "kokoa",
   "main": "app/app.js",
   "scripts": {
-    "start":"./node_modules/.bin/nodemon server.js --exec './node_modules/.bin/babel-node --presets react,es2015,stage-0' ",
+    "start":"./node_modules/.bin/nodemon --debug server.js --exec './node_modules/.bin/babel-node --presets react,es2015,stage-0' ",
     "webpack": "node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --content ...",
     "buildassets": "node_modules/.bin/webpack --config webpack.config.js --port 8080 --content ...",
     "buildapp": "node_modules/.bin/babel ./app -d build ./app/app.js --presets react,es2015,stage-0",
