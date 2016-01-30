@@ -67,6 +67,10 @@ npm install --save-dev babel-preset-stage-0
 
 npm install --save-dev nodemon 
 
+npm install --save-dev koa-static
+
+npm install --save-dev koa-logger
+
 
 
 
