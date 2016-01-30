@@ -1,7 +1,7 @@
 module.exports = {
     entry:"./app/assets/js/main.jsx",
     output: {
-        path: __dirname + "/public",
+        path: __dirname + "/public/bundles",
         filename: "bundle.js"
     },
     resolve: {
@@ -9,7 +9,14 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.jsx$/, loader: "babel-loader"}
+            { 
+                test: /\.jsx$/, 
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query: {
+                    presets: ['react','es2015','stage-0']
+                } 
+            }
         ]
     }   
 };
