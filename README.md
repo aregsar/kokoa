@@ -41,6 +41,8 @@ npm install --save koa
 
 npm install --save koa-static
 
+npm install --save koa-logger
+
 npm install --save react@0.14.6
 
 npm install --save react-dom@0.14.6
@@ -67,9 +69,7 @@ npm install --save-dev babel-preset-stage-0
 
 npm install --save-dev nodemon 
 
-npm install --save-dev koa-static
 
-npm install --save-dev koa-logger
 
 
 
