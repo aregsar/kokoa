@@ -4,14 +4,14 @@
   "description": "kokoa",
   "main": "app/app.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon --debug server.js --ignore app/assets/ --ignore public/ --exec './node_modules/.bin/babel-node --presets react,es2015,stage-0' ",
+    "start": "./node_modules/.bin/nodemon --debug server.js --ignore app/assets/ --ignore public/bundles/ --exec './node_modules/.bin/babel-node --presets react,es2015,stage-0' ",
     "webpack:build": "node_modules/.bin/webpack -w -d",
-    "webpack:serve": "node_modules/.bin/webpack-dev-server --config webpack.config.js --port 8080 --content ...",
+    "webpack:serve": "node_modules/.bin/webpack-dev-server --inline",
     "buildassets": "node_modules/.bin/webpack --config webpack.config.js --port 8080 --content ...",
     "buildapp": "node_modules/.bin/babel ./app -d build ./app/app.js --presets react,es2015,stage-0",
     "serve": "node ./build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:release": "node_modules/.bin/webpack --config webpack.config.release.js"    
+    "webpack:release": "node_modules/.bin/webpack --config webpack.config.release.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/aregsar/kokoa#readme",
   "dependencies": {
+    "jquery": "^2.2.0",
     "koa": "^1.1.2",
     "koa-logger": "^1.3.0",
     "koa-static": "^2.0.0",
