@@ -25,6 +25,19 @@ navigate to: http://localhost:3000
 
 make changes, save and refresh the browser
 
+#live reloading webpack modules
+
+stop webpack server
+
+mv public/index.html public/index.backup.html
+
+mv public/index.hot.html public/index.html
+
+npm run webpack:server
+
+make changes to client side script files and see browser automatically refresh with changes
+
+
 #command to re-install local packages from package.json file
 
 cd kokoa
