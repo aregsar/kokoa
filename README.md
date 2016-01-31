@@ -15,6 +15,10 @@ cd kokoa
 
 npm install
 
+npm run webpack:build
+
+open a new terminal tab in same directory
+
 npm start
 
 navigate to: http://localhost:3000
