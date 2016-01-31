@@ -2,7 +2,8 @@ module.exports = {
     entry:"./app/assets/js/main.jsx",
     output: {
         path: __dirname + "/public/bundles",
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/public/bundles"
     },
     resolve: {
         extensions: ['','.js','.jsx']
@@ -10,7 +11,7 @@ module.exports = {
     module: {
         loaders: [
             { 
-                test: /\.jsx$/, 
+                test: /\.jsx?$/, 
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 query: {
