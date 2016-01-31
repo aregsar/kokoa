@@ -1,15 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import App from "./components/app"
 
-class App extends React.Component {
-    render = () => {
-        return (
-            <div>Hello React</div>
-        );
-    };  
-};
 
-let documentReady = () => {    
+const documentReady = () => {    
     ReactDOM.render(<App />,document.getElementById('app'));
 };
 
