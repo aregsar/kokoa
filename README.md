@@ -15,7 +15,7 @@ cd kokoa
 
 npm install
 
-mv ./app/assets/html/index.html ./public/index.html
+cp ./app/assets/html/index.html ./public/index.html
 
 npm run webpack:watch
 
@@ -31,7 +31,7 @@ make changes, save and refresh the browser
 
 stop webpack server
 
-mv ./app/assets/html/index.hot.html ./public/index.html
+cp ./app/assets/html/index.hot.html ./public/index.html
 
 npm run webpack:serve
 
