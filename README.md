@@ -15,7 +15,9 @@ cd kokoa
 
 npm install
 
-npm run webpack:build
+mv ./app/assets/html/index.html ./public/index.html
+
+npm run webpack:watch
 
 open a new terminal tab in same directory
 
@@ -29,11 +31,9 @@ make changes, save and refresh the browser
 
 stop webpack server
 
-mv public/index.html public/index.backup.html
+mv ./app/assets/html/index.hot.html ./public/index.html
 
-mv public/index.hot.html public/index.html
-
-npm run webpack:server
+npm run webpack:serve
 
 make changes to client side script files and see browser automatically refresh with changes
 
