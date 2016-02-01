@@ -15,8 +15,6 @@ cd kokoa
 
 npm install
 
-cp ./app/assets/html/index.html ./public/index.html
-
 npm run webpack:watch
 
 open a new terminal tab in same directory
@@ -31,11 +29,12 @@ make changes, save and refresh the browser
 
 stop webpack server
 
-cp ./app/assets/html/index.hot.html ./public/index.html
-
 npm run webpack:serve
 
 make changes to client side script files and see browser automatically refresh with changes
+
+note: currently webpack:serve replaces index.html in the public directroy with identical
+file that uses full webpack dev server path http://localhost:8080/public/bundles/bundle.js
 
 
 #command to re-install local packages from package.json file

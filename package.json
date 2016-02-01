@@ -5,13 +5,15 @@
   "main": "app/app.js",
   "scripts": {
     "start": "./node_modules/.bin/nodemon --debug server.js --ignore app/assets/ --ignore public/bundles/ --exec './node_modules/.bin/babel-node --presets react,es2015,stage-0' ",
-    "webpack:watch": "node_modules/.bin/webpack -w -d",
-    "webpack:serve": "node_modules/.bin/webpack-dev-server -d --inline --config webpack.config.server.js",
+    "webpack:watch": "npm run copy:index && node_modules/.bin/webpack -w -d",
+    "webpack:serve": "npm run copy:hotindex && node_modules/.bin/webpack-dev-server -d --inline --config webpack.config.server.js",
     "webpack:build": "node_modules/.bin/webpack -p",
     "buildassets": "node_modules/.bin/webpack --config webpack.config.js --port 8080 --content ...",
     "buildapp": "node_modules/.bin/babel ./app -d build ./app/app.js --presets react,es2015,stage-0",
     "serve": "node ./build/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"   
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy:index": "cp ./app/assets/html/index.html ./public/index.html",
+    "copy:hotindex": "cp ./app/assets/html/index.hot.html ./public/index.html"     
   },
   "repository": {
     "type": "git",
