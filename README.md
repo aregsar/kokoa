@@ -1,4 +1,4 @@
-# kokoa - A koa-react-webpack starter project
+#kokoa - A koa-react-webpack starter project
 
 assumes the following is pre-installed:
 
@@ -7,7 +7,9 @@ node version 5.4.0
 npm version 3.5.3
 
 
-#instructions to run the project:
+#instructions to run the project on OSX:
+
+open a bash terminal
 
 git clone git@github.com:aregsar/kokoa.git
 
